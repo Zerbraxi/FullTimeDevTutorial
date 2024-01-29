@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://df7cqhr8lufy0"]
+
+[ext_resource type="PackedScene" uid="uid://8vjjsvc36weg" path="res://Player/Player.tscn" id="1_oich3"]
+[ext_resource type="Texture2D" uid="uid://dvvqhmy3lfwct" path="res://Art/Textures/tileset.png" id="2_p5i1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spavy"]
+size = Vector2(64, 32)
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_oich3")]
+position = Vector2(303, 96)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(45, -6)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(265, 194)
+texture = ExtResource("2_p5i1s")
+region_enabled = true
+region_rect = Rect2(16, 64, 64, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(265, 194)
+shape = SubResource("RectangleShape2D_spavy")
