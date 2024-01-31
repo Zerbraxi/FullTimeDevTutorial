@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print_debug("Loaded")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +24,7 @@ func get_input_vector() -> Vector2:
 	
 func apply_gravity(delta: float) -> void:
 	velocity.y += gravity * delta
-	print_debug("gravity applied")
+	#print_debug("gravity applied")
 	
 # lerp function needs 3 values
 # lerp(value a, value b, rate at which we approach value b from a)

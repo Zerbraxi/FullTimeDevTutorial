@@ -5,6 +5,7 @@ extends State
 func enter() -> void:
 	player.sprite.play("Idle")
 	player.velocity.x = 0
+	print_debug("Idle State Entered")
 	
 func exit() -> void:
 	pass

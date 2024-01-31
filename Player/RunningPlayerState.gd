@@ -4,6 +4,7 @@ extends State
 
 func enter() -> void:
 	player.sprite.play("Run")
+	print_debug("Running State Entered")
 	
 func exit() -> void:
 	pass

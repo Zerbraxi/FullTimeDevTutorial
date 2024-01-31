@@ -15,17 +15,17 @@ func _ready() -> void:
 	
 
 # When a state is entered
-func _enter() -> void:
+func enter() -> void:
 	pass
 	
 # When a state is exited
-func _exit() -> void:
+func exit() -> void:
 	pass
 	
 # General function called every frame
-func _process(delta: float) -> void:
+func update(delta: float) -> void:
 	pass
 	
 # Physics function called every frame
-func _physics_process(delta: float) -> void:
+func physics_update(delta: float) -> void:
 	pass
