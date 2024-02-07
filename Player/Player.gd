@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var speed: float = 100.0
 @export var acceleration: float = 0.25
 @export var gravity: float = 500.0
+@export var jump_velocity: float = 200.0
+
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
@@ -34,6 +36,9 @@ func apply_movement(input_vector: Vector2, delta: float) -> void:
 	
 func apply_velocity(delta: float) -> void:
 	move_and_slide()
+	
+func apply_jump():
+	velocity.y -= jump_velocity
 	
 func change_direciton(direction) -> void:
 	if sign(direction) == -1:

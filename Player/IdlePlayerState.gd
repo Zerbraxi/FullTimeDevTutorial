@@ -18,6 +18,10 @@ func update(delta: float) -> void:
 	
 	if input_vector.x != 0:
 		transition.emit("RunningPlayerState")
+	if Input.is_action_just_pressed("Jump") and owner.is_on_floor():
+		transition.emit("JumpPlayerState")	
+	if player.velocity.y > 1.0:
+		transition.emit("FallPlayerState")
 	
 func physics_update(delta: float) -> void:
 	pass

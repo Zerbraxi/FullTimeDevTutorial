@@ -36,3 +36,29 @@ region_rect = Rect2(16, 64, 64, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(265, 194)
 shape = SubResource("RectangleShape2D_spavy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D2"]
+position = Vector2(104, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/StaticBody2D"]
+position = Vector2(265, 194)
+texture = ExtResource("2_p5i1s")
+region_enabled = true
+region_rect = Rect2(16, 64, 64, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D"]
+position = Vector2(265, 194)
+shape = SubResource("RectangleShape2D_spavy")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D2"]
+position = Vector2(167, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/StaticBody2D2"]
+position = Vector2(265, 194)
+texture = ExtResource("2_p5i1s")
+region_enabled = true
+region_rect = Rect2(16, 64, 64, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D2"]
+position = Vector2(265, 194)
+shape = SubResource("RectangleShape2D_spavy")

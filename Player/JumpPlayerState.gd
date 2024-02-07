@@ -1,10 +1,11 @@
-class_name RunningPlayerState
+class_name JumpPlayerState
 
 extends State
 
+
 func enter() -> void:
-	player.sprite.play("Run")
-	print_debug("Running State Entered")
+	player.sprite.play("Jump")
+	player.apply_jump()
 	
 func exit() -> void:
 	pass
@@ -18,12 +19,8 @@ func update(delta: float) -> void:
 	player.apply_gravity(delta)
 	player.apply_velocity(delta)
 	
-	if input_vector.x == 0:
-		transition.emit("IdlePlayerState")
-	if Input.is_action_just_pressed("Jump") and owner.is_on_floor():
-		transition.emit("JumpPlayerState")
 	if player.velocity.y > 1.0:
-		transition.emit("FallPlayerState")	
+		transition.emit("FallPlayerState")
 	
 func physics_update(delta: float) -> void:
 	pass
