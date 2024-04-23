@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://df7cqhr8lufy0"]
+[gd_scene load_steps=5 format=3 uid="uid://df7cqhr8lufy0"]
 
 [ext_resource type="PackedScene" uid="uid://8vjjsvc36weg" path="res://Player/Player.tscn" id="1_oich3"]
-[ext_resource type="Texture2D" uid="uid://dvvqhmy3lfwct" path="res://Art/Textures/tileset.png" id="2_p5i1s"]
+[ext_resource type="Texture2D" uid="uid://dvvqhmy3lfwct" path="res://Art/Textures/Tilesets/tileset.png" id="2_p5i1s"]
+[ext_resource type="TileSet" uid="uid://dirfvx2dwneia" path="res://Art/Textures/Tilesets/test_level.tres" id="3_hh038"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spavy"]
 size = Vector2(64, 32)
@@ -62,3 +63,9 @@ region_rect = Rect2(16, 64, 64, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/StaticBody2D2"]
 position = Vector2(265, 194)
 shape = SubResource("RectangleShape2D_spavy")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("3_hh038")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(917518, 65537, 4, 983054, 65537, 5, 917519, 131073, 4, 983055, 131073, 5, 917520, 196609, 4, 983056, 196609, 5, 917521, 262145, 4, 983057, 262145, 5)

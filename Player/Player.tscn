@@ -118,3 +118,13 @@ script = ExtResource("19_psmgg")
 
 [node name="FallPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("20_horar")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 6.73
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.09
+drag_right_margin = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true
